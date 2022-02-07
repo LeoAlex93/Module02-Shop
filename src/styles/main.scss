@@ -1,5 +1,65 @@
-$bg: #ff0;
+$text: #27300f;
+$orange: #d26a22;
+$white: #fff;
 
-body {
-    background-color: $bg;
+.header {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__nav {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        gap: 48px;
+    }
+    &__link {
+        font-size: 16px;
+        color: $text;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__tel {
+        text-decoration: none;
+        font-size: 16px;
+        color: $text;
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__cart {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/cart.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 17px 15px;
+        background-color: $orange;
+        border-radius: 100%;
+        position: relative;
+    }
+    &__counter {
+        color: $white;
+        font-size: 8px;
+        position: absolute;
+        right: 8px;
+        top: 6px;
+    }
+}
+
+.logo {
+    display: block;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 123px;
+    height: 32px;
 }
