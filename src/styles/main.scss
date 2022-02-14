@@ -19,7 +19,7 @@ body {
 
 .header {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 auto 6rem;
     padding: 4rem 15px 0 15px;
     display: flex;
     align-items: center;
@@ -92,19 +92,121 @@ body {
 
 .main {
     background-image: url(../images/main.png);
+    background-size: cover;
+    background-position-x: center;
+    position: relative;
+    padding-bottom: 187px;
     &__item {
         margin-left: 12rem;
+        margin-top: 8.4rem;
         max-width: 378px;
     }
     &__link {
         margin-top: 6rem;
     }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__cover {
+        flex-basis: 763px;
+        height: 763px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__line {
+        width: 658px;
+        height: 658px;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 92%;
+    }
+
+    &__btn {
+        background-color: transparent;
+        border: none;
+        padding: 0; 
+        color: $green;
+        position: absolute;
+        text-align: left;
+        &:hover {
+            .main__btn {
+                &::before {
+                    background-color: $orange;
+                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+                }
+            }
+        }
+    &::before {
+        content: '';
+        background-color: $green;
+        width: 11px;
+        height: 11px;
+        box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+        border-radius: 100%;
+        position: absolute;
+        }
+        &_1 {
+            top: 68px;
+            left: 38px;
+            &::before {
+                bottom: 18px;
+                right: -42px;
+            }
+        }
+        &_2 {
+            top: 200px;
+            right: 81px;
+            &::before {
+                top: 0;
+                right: 0;
+            }
+        }
+        &_3 {
+            bottom: 4px;
+            right: 268px;
+            &::before {
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    &__tomato {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 110px;
+        height: 119px;
+    }
+
+    &__food {
+        display: block;
+        color: rgba($green, 0.8);
+    }
+
 }
 
 .title {
     font-family: $font-cormorant;
     font-weight: 700;
-    font-size: 8rem;
+    font-size: 7rem;
     margin: 0;
     &__span {
         font-style: italic;
