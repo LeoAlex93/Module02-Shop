@@ -15,11 +15,12 @@ body {
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
+    width: 1920px;
 }
 
 .header {
     max-width: 1440px;
-    margin: 0 auto 6rem;
+    margin: 0 auto 5rem;
     padding: 4rem 15px 0 15px;
     display: flex;
     align-items: center;
@@ -35,6 +36,8 @@ body {
     &__link {
         color: $green;
         text-decoration: none;
+        position: relative;
+        right: 18rem;
         &:hover {
             color: $orange;
         }
@@ -43,10 +46,16 @@ body {
         text-decoration: none;
         font-weight: 500;
         color: $green;
+        letter-spacing: 0.1rem;
+        position: absolute;
+        right: 36rem;
         &:hover {
             color: $orange;
         }
+        
     }
+
+
 
     &__cart {
         display: block;
@@ -83,6 +92,13 @@ body {
     height: 3.2rem;
 }
 
+.general {
+    display: flex;
+    gap: 21rem;
+}
+
+
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -98,11 +114,11 @@ body {
     padding-bottom: 187px;
     &__item {
         margin-left: 12rem;
-        margin-top: 8.4rem;
+        margin-top: 6.4rem;
         max-width: 378px;
     }
     &__link {
-        margin-top: 6rem;
+        margin-top: 5.8rem;
     }
 
     &__flex {
@@ -164,50 +180,86 @@ body {
         position: absolute;
         }
         &_1 {
-            top: 68px;
-            left: 38px;
+            top: 40px;
+            left: 68px;
             &::before {
-                bottom: 18px;
-                right: -42px;
+                bottom: 10px;
+                right: -34px;
             }
         }
         &_2 {
-            top: 200px;
-            right: 81px;
+            top: 187px;
+            right: 2px;
             &::before {
-                top: 0;
-                right: 0;
+                top: 24px;
+                right: 88px;
             }
         }
         &_3 {
-            bottom: 4px;
-            right: 268px;
+            bottom: -45px;
+            right: 243px;
             &::before {
-                bottom: 0;
-                right: 0;
+                bottom: 56px;
+                right: 31px;
             }
         }
     }
     &__tomato {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 117px;
+        right: 121px;
         width: 110px;
         height: 119px;
+    }
+
+    &__avokado {
+        position: absolute;
+        top: 47px;
+        right: -15px;
+        width: 194px;
+        height: 189px;
+    }
+
+    &__cucumber {
+        position: absolute;
+        top: -5rem;
+        left: 69rem;
+        width: 85px;
+        height: 92px;
+    }
+
+    &__pepper {
+        position: absolute;
+        top: 39.7rem;
+        left: 4rem;
+        width: 86px;
+        height: 72px;
+    }
+
+    &__beans {
+        position: absolute;
+        bottom: 16.6rem;
+        left: 2px;
+        width: 105px;
+        height: 115px;
     }
 
     &__food {
         display: block;
         color: rgba($green, 0.8);
+        line-height: 3rem;
     }
+    
 
 }
 
 .title {
     font-family: $font-cormorant;
     font-weight: 700;
-    font-size: 7rem;
+    font-size: 8rem;
     margin: 0;
+    line-height: 1em;
+    margin-top: 4rem;
     &__span {
         font-style: italic;
     }
@@ -221,12 +273,15 @@ body {
 .description {
     &_size-s {
         font-size: 1.8rem;
+        line-height: 2.6rem;
+        margin: 0;
     }
 }
 
 .link {
     color: $white;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
     padding: 2.5rem 4.2rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem 0.2rem rgba(207, 92, 13, 0.2);
